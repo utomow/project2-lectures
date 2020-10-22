@@ -4,7 +4,7 @@ function getBowl(size) {
   return {
     capacity: size,
     contents: [],
-    description: "Bowl of size " + size + "mL"
+    description: "bowl of size " + size + "mL"
   }
 }
   

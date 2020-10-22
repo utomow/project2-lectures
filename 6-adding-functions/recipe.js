@@ -25,8 +25,7 @@ function getBowl(size) {
   console.info("Finding a bowl of size " + size + "mL")
   return {
     capacity: size,
-    contents: [],
-    description: "Bowl of size " + size + "mL"
+    description: "bowl of size " + size + "mL"
   }
 }
 

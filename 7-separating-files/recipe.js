@@ -1,7 +1,7 @@
 
 const MeasuringTools = require('./measuringTools')
 const Ingredients = require('./ingredients')
-const Bowls = require('./bowl')
+const Bowls = require('./bowls')
 
 // Do the recipe!
 console.log("Let us begin!")

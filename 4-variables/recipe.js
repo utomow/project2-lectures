@@ -7,6 +7,7 @@ const Ingredients = {
 }
 
 function measure(stuff, amount) {
+  console.info('Measuring ' + amount + 'mL of ' + stuff )
   return {
       ingredient: stuff,
       amount: amount,
