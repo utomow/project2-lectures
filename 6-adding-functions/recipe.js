@@ -23,10 +23,11 @@ function measure(stuff, amount) {
 
 function getBowl(size) {
   console.info("Finding a bowl of size " + size + "mL")
-  return {
+  let bowl = {
     capacity: size,
     description: "bowl of size " + size + "mL"
   }
+  return bowl
 }
 
 function addToBowl(bowl, someStuff) {
@@ -34,13 +35,15 @@ function addToBowl(bowl, someStuff) {
 }
 
 // Do the recipe!
+console.clear()
 console.log("Let us begin!")
 
 let someYeast = measure(Ingredients.yeast, 1 * TEASPOON)
 let someWater = measure(Ingredients.water, 2.25 * CUP)
 let someSugar = measure(Ingredients.sugar, 0.5 * TEASPOON)
 
-let mixingBowl = getBowl(4.5 * QUART)
+let desiredBowlSize = 4.5 * QUART
+let mixingBowl = getBowl(desiredBowlSize)
 
 addToBowl(mixingBowl, someYeast)
 addToBowl(mixingBowl, someWater)

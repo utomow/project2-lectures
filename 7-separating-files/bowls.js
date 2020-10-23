@@ -1,11 +1,12 @@
 
 function getBowl(size) {
   console.info("Finding a bowl of size " + size + "mL")
-  return {
+  let bowl = {
     capacity: size,
     contents: [],
     description: "bowl of size " + size + "mL"
   }
+  return bowl
 }
   
 function addToBowl(bowl, someStuff) {
