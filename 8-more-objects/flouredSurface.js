@@ -1,11 +1,11 @@
 
 function getFlouredSurface() {
   console.info("Flouring a large cutting board")
-  let bowl = {
+  let flouredSurface = {
     content: null,
     description: "floured surface"
   }
-  return bowl
+  return flouredSurface
 }
       
 module.exports = {

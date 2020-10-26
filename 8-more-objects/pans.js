@@ -15,5 +15,6 @@ function grease(pan) {
 }
 
 module.exports = {
-  getPan
+  getPan,
+  grease
 }
