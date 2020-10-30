@@ -1,11 +1,10 @@
 function measure(stuff, amount) {
     console.info("Measuring " + amount + "mL of " + stuff)
-    let measuredStuff = {
+    return {
         ingredient: stuff,
         amount: amount,
         description: amount + "mL of " + stuff
     }
-    return measuredStuff
 }
 
 module.exports = {

@@ -8,7 +8,7 @@ function getPan() {
   }
   return pan
 }
-
+ 
 function grease(pan) {
   console.info("Greasing the pan")
   pan.greased = true
