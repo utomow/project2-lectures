@@ -10,6 +10,8 @@ const Oven = require("./newOven")
 
 console.clear()
 
+console.log("Let's begin!! \n")
+
 // Ingredients
 // 1 package (1/4 ounce) active dry yeast
 // 2-1/4 cups warm water (110° to 115°)
