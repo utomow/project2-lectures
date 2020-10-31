@@ -1,16 +1,20 @@
-const {volumeUnit, weightUnit} = require("./units.js")
-const Material = require("./material")
+const {TEASPOON, TABLESPOON, CUP, QUARTS} = require("./units")
+const materials = require("./material")
 
 
-class Ingredient extends Material {
-  constructor(material, amount, unit) {
+class Ingredient {
+  constructor(material, amount) {
     // console.log(unit)
-    super(material); 
-    this.volume = this.normalizeVolume(amount, unit)
-    this.weight = this.normalizeWeight(amount, unit)
-    this.state = this.setState()
+    if (material != undefined) {
+      this.description = material.description; 
+      this.volume = amount;
+      this.weight = amount * material.density;
+      this.form = material.form;
+      this.name = material.name;
+    }
   }
 
+/*
   setState(unit) {
     volumeUnit.forEach(volUnit => {
       console.log("the unit in construtor = " + unit)
@@ -52,6 +56,8 @@ class Ingredient extends Material {
   calculateContentsDensity() {
     return weight/volume
   }
+*/
+
 }
 
 module.exports = Ingredient

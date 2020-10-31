@@ -1,3 +1,49 @@
+module.exports = {
+  Yeast: {
+    name: "Yeast",
+    density: 1.1126,
+    description: "Granulated Yeast",
+    form: "solid"
+  },
+  Water: {
+    name: "Water",
+    density: 1,
+    description: "Plain Water",
+    form: "fluid"
+  },
+  Sugar: {
+    name: "Sugar",
+    density: 1.59,
+    description: "Granulated Sugar",
+    form: "solid"
+  },
+  Oil: {
+    name: "Oil",
+    density: 0.92,
+    description: "Canola oil",
+    form: "fluid"
+  },
+  Flour: {
+    name: "Flour",
+    density: 0.593,
+    description: "Bread flour",
+    form: "solid"
+  },
+  Grease: {
+    name: "Grease",
+    density: 0.9,
+    description: "Vegetable base grease",
+    form: "solid"
+  },
+  Salt: {
+    name: "Salt",
+    density: 2.165,
+    description: "Sea Salt",
+    form: "solid"
+  }
+}
+
+/*
 class Material {
   constructor(name) {
     this.name = name;
@@ -36,3 +82,4 @@ class Material {
 
 
 
+*/

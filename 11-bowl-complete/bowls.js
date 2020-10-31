@@ -55,6 +55,7 @@ function mix(bowl) {
     }
     replaceContents(bowl, newContents)
   }
+  
   if (bowlContains(bowl, "yeast mixture") && bowlContains(bowl, "flour")) {
     let combinedVolume = sumContentsVolume(bowl)
     let newContents = {
