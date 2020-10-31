@@ -6,7 +6,8 @@ class Ingredient {
   constructor(material, amount) {
     // console.log(unit)
     if (material != undefined) {
-      this.description = material.description; 
+      console.log("Preparing " + amount + "mL of " + material.description)
+      this.description = amount +  "mL of " + material.description; 
       this.volume = amount;
       this.weight = amount * material.density;
       this.form = material.form;

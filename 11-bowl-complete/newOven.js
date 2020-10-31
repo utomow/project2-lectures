@@ -9,7 +9,7 @@ class Timer {
     }
 
     setTimer(time) {
-        console.log("Setting timer to " + time + " s.");
+        console.log("Setting timer to " + time + " min.");
         this.remainingTime = time;
     }
 
@@ -20,7 +20,7 @@ class Timer {
 
     isTimerUp() {
         if (this.running && this.remainingTime <= 0) {
-            console.log("Ding! Ding! Ding!!!!");
+            console.log("Ding! Ding! Ding!!!!\n");
             running = false;
             return true;
         } else {
@@ -32,13 +32,13 @@ class Timer {
 
 class Oven extends Container {
     constructor(capacity) {
-        console.log("\nFinding an oven with capacity of  " + capacity + " mL");
         super(capacity);
+        console.log("Finding an oven with capacity of  " + capacity + " mL");
         this.temperature = 200;
         this.temperatureSetpoint = 0;
         this.contents = [];
         this.timer = new Timer();
-        this.description = "Oven with the capacity of " + this.volume + " mL.";
+        this.description = "oven with the capacity of " + this.volume + " mL.";
     }
 
     setTemperature(temperature) {
@@ -57,7 +57,7 @@ class Oven extends Container {
             wait1S();
         } while (this.temperature < this.temperatureSetpoint);
         this.temperature = this.temperatureSetpoint
-        console.info("Ding!!! Oven is ready. Oven temperature is " + this.temperature + " C.");
+        console.info("Ding!!! Oven is ready. Oven temperature is " + this.temperature + " C.\n");
     }
 
     bake(time) {
@@ -75,18 +75,19 @@ class Oven extends Container {
             wait1S();
         } while (this.timer.remainingTime > 0);
         this.timer.remainingTime = 0
-        console.info("Ding! Ding! Ding!. Timer is expired. Remove the pan!!!");
+        console.info("Ding! Ding! Ding!. Timer is expired. Remove the pan!!!\n");
+
         let newIngredient = new Ingredient()
-        newIngredient.name = "Bread"
-        newIngredient.volume = this.getContentsTotalVolume()
-        newIngredient.weight = this.getContentsTotalWeight()
-        newIngredient.description = "A loaf of bread baked to golden brown."
-        newIngredient.form = "solid"
+        // newIngredient.name = "Bread"
+        // newIngredient.volume = this.getContentsTotalVolume()
+        // newIngredient.weight = this.getContentsTotalWeight()
+        // newIngredient.description = newIngredient.weight + "gr of loaf of bread baked to golden brown."
+        // newIngredient.form = "solid"
         this.contents.forEach((pan) => {
             newIngredient.name = "Bread"
             newIngredient.volume = pan.getContentsTotalVolume()
             newIngredient.weight = pan.getContentsTotalWeight()
-            newIngredient.description = "A loaf of bread baked to golden brown."
+            newIngredient.description = newIngredient.weight + "gr of loaf of bread baked to golden brown."
             newIngredient.form = "solid"
                     pan.replaceContent(newIngredient);
             // element.contentsDescription = element.getContentsDescription()
@@ -113,7 +114,7 @@ class Oven extends Container {
     add(someStuff) {
         console.log(
             "Adding " +
-            someStuff.contents[0].name +
+            someStuff.contents[0].description +
              " in the " +
              someStuff.description +
             " into " +

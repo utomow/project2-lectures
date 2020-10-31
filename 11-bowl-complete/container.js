@@ -2,9 +2,10 @@ const Ingredient = require("./ingredient")
 
 class Container {
   constructor(volume) {
+    console.info("")
     this.volume = volume;
     this.contents = [];
-    this.description = "A container with a capacity of " + volume + " mL"
+    this.description = "container with a capacity of " + volume + " mL"
   }
 
   add(ingredient) {
@@ -27,9 +28,9 @@ class Container {
       console.info("Covering " + this.description)
       let newIngredient = new Ingredient()
       newIngredient.name = "Dough"
-      newIngredient.description = "Rise to double volume dough"
       newIngredient.volume = this.getContentsTotalVolume() * 2;
       newIngredient.weight = this.getContentsTotalWeight();
+      newIngredient.description = newIngredient.volume + "mL of rise to double volume dough with a weight of " + newIngredient.weight + "gr."
       newIngredient.form = "solid"
       this.replaceContent(newIngredient)
     } else {
@@ -74,6 +75,7 @@ class Container {
     this.contents.forEach((stuff) => {
       console.info("  " + stuff.description)    
     })
+    console.info("")
   }
 }
 

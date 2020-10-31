@@ -2,43 +2,43 @@ module.exports = {
   Yeast: {
     name: "Yeast",
     density: 1.1126,
-    description: "Granulated Yeast",
+    description: "granulated yeast",
     form: "solid"
   },
   Water: {
     name: "Water",
     density: 1,
-    description: "Plain Water",
+    description: "warm water",
     form: "fluid"
   },
   Sugar: {
     name: "Sugar",
     density: 1.59,
-    description: "Granulated Sugar",
+    description: "granulated sugar",
     form: "solid"
   },
   Oil: {
     name: "Oil",
     density: 0.92,
-    description: "Canola oil",
+    description: "canola oil",
     form: "fluid"
   },
   Flour: {
     name: "Flour",
     density: 0.593,
-    description: "Bread flour",
+    description: "bread flour",
     form: "solid"
   },
   Grease: {
     name: "Grease",
     density: 0.9,
-    description: "Vegetable base grease",
+    description: "vegetable base grease",
     form: "solid"
   },
   Salt: {
     name: "Salt",
     density: 2.165,
-    description: "Sea Salt",
+    description: "sea salt",
     form: "solid"
   }
 }
