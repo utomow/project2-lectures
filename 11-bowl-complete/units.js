@@ -1,3 +1,4 @@
+const LITER = 1000 //mL
 const TEASPOON = 5 // mL
 const TABLESPOON = 15 // mL
 const CUP = 250 // mL
@@ -31,4 +32,4 @@ exports.weightUnit =  [
 
 */
 
-module.exports = {TEASPOON, TABLESPOON, CUP, QUART, OUNCE, CM, INCH}
+module.exports = {LITER, TEASPOON, TABLESPOON, CUP, QUART, OUNCE, CM, INCH}

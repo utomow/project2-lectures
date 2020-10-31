@@ -19,8 +19,8 @@ class myOtherClass {
   }
 }
 
-const array1 = [1,2, 3, 4, 5]
+const array1 = [1, 2, 3, 4, 5]
 const array2 = ['a', 'b', 'c', 'd', 'e']
 
 
-module.exports = {myClass : myClass, myOtherClass : myOtherClass, array1 : array1, array2: array2}
+module.exports = { myClass: myClass, myOtherClass: myOtherClass, array1: array1, array2: array2 }

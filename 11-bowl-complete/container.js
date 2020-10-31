@@ -67,7 +67,14 @@ class Container {
       }
     })
     return foundIt;
-    }
+  }
+
+  printContents() {
+    console.info("The " + this.description + " contains: ")
+    this.contents.forEach((stuff) => {
+      console.info("  " + stuff.description)    
+    })
+  }
 }
 
 module.exports = Container

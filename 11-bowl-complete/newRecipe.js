@@ -1,9 +1,10 @@
 const materials = require("./material")
-const {TEASPOON, TABLESPOON, CUP, QUARTS, OUNCE, CM, INCH} = require("./units")
+const {TEASPOON, TABLESPOON, CUP, QUARTS, OUNCE, CM, INCH, LITER} = require("./units")
 const Ingredient = require("./ingredient")
 const Bowl = require("./newBowl")
 const WorkSurface = require("./newWorkSurface")
 const Pan = require("./newPan.js")
+const Oven = require("./newOven")
 // const Ingredient = require("./ingredient")
 // const { volumeUnit, weightUnit } = require("./units")
 
@@ -28,60 +29,63 @@ let mixingBowl = new Bowl(12 * CUP);
 mixingBowl.add(someYeast)
 mixingBowl.add(someWater)
 mixingBowl.add(someSugar)
-
+mixingBowl.printContents()
 mixingBowl.mixContent()
-console.log(mixingBowl)
-
+mixingBowl.printContents()
 mixingBowl.add(someSalt)
 mixingBowl.add(someOil)
 mixingBowl.add(someFlour)
-console.log(mixingBowl)
-
+mixingBowl.printContents()
 mixingBowl.mixContent()
-console.log(mixingBowl)
+mixingBowl.printContents()
 
 let marbleTop = new WorkSurface(100 * CM, 60 * CM)
-console.log(marbleTop)
-marbleTop.add(mixingBowl.removeContent())
-
+marbleTop.printContents()
 marbleTop.flour()
+marbleTop.add(mixingBowl.removeContent())
 marbleTop.kneadContent();
-console.log(marbleTop)
+marbleTop.printContents()
 
 let greasedBowl = new Bowl(20 * CUP)
 greasedBowl.grease()
 greasedBowl.add(marbleTop.removeContent())
-console.log(greasedBowl)
+greasedBowl.printContents()
 
 greasedBowl.cover()
-console.log(greasedBowl)
 greasedBowl.punchContent()
+greasedBowl.printContents()
 
 marbleTop.add(greasedBowl.removeContent())
-console.log(marbleTop)
-
 marbleTop.divideContent()
-console.log(marbleTop)
-
 marbleTop.shapeContent()
-console.log(marbleTop)
+marbleTop.printContents()
 
 let bakingPan1 = new Pan(9 * INCH, 5 * INCH, 15 * CUP)
 let bakingPan2 = new Pan(9 * INCH, 5 * INCH, 15 * CUP)
 bakingPan1.grease();
 bakingPan2.grease()
-console.log(bakingPan1)
 
 bakingPan1.add(marbleTop.removeContent())
 bakingPan2.add(marbleTop.removeContent())
-console.log(bakingPan1)
-console.log(bakingPan2)
-console.log(marbleTop)
-
 bakingPan1.cover();
 bakingPan2.cover()
-console.log(bakingPan1)
-console.log(bakingPan2)
+bakingPan1.printContents()
+bakingPan2.printContents()
 
+let bakingOven = new Oven(10 * LITER);
+bakingOven.setTemperature(375)
+bakingOven.waitTemperature()
 
+bakingOven.add(bakingPan1)
+bakingOven.add(bakingPan2)
+bakingOven.printContents()
+
+bakingOven.bake(35)
+bakingOven.printContents()
+
+let wireRack = new WorkSurface(100 * CM, 60 * CM)
+
+wireRack.add(bakingOven.removeContent().removeContent())
+wireRack.add(bakingOven.removeContent().removeContent())
+wireRack.printContents()
 
